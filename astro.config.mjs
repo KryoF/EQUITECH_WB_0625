@@ -7,6 +7,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://KryoF.github.io',
+  base: 'EQUITECH_WB_0625',
   integrations: [mdx(), sitemap(), icon()],
   vite: {
     plugins: [tailwindcss()],
