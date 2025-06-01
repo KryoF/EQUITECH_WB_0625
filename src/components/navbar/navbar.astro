@@ -1,8 +1,9 @@
 ---
 import Container from "@/components/container.astro";
-import Link from "@/components/ui/link.astro";
+import logoImage from "@/assets/equitech-logo.png";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "astro:assets";
 
 const menuitems = [
   {
@@ -43,9 +44,12 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          >
-          <img src="/EQUITECH_WB_0625/src/assets/equitech-logo.png" alt="equitech logo" class="h-8 w-auto" />
+        <a href="/EQUITECH_WB_0625" class="text-lg">
+          <Picture
+            src={logoImage} 
+            alt="equitech logo" 
+            class="h-8 w-auto" 
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
