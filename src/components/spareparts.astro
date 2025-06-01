@@ -1,0 +1,90 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const spareparts = [
+  {
+    title: "Bombas",
+    description:
+      "Repuestos de bombas hidráulicas de alta eficiencia para garantizar el flujo y presión óptimos en tu sistema.",
+    icon: "bx:bxs-droplet",
+  },
+  {
+    title: "Motores",
+    description:
+      "Motores hidráulicos de reemplazo con materiales resistentes y precisión en el rendimiento para uso industrial.",
+    icon: "bx:bxs-cog",
+  },
+  {
+    title: "Válvulas",
+    description:
+      "Válvulas hidráulicas originales para controlar flujo, dirección y presión con exactitud en tu maquinaria.",
+    icon: "bx:bxs-toggle-right",
+  },
+  {
+    title: "Cilindros",
+    description:
+      "Cilindros hidráulicos de repuesto, fabricados con estándares internacionales para máxima durabilidad.",
+    icon: "bx:bxs-cylinder",
+  },
+  {
+    title: "Filtros",
+    description:
+      "Filtros hidráulicos que aseguran limpieza de fluidos, protegiendo componentes y alargando la vida útil del sistema.",
+    icon: "bx:bxs-filter-alt",
+  },
+  {
+    title: "Mangueras y Conexiones",
+    description:
+      "Mangueras hidráulicas y conexiones resistentes a alta presión, compatibles con múltiples configuraciones industriales.",
+    icon: "simple-icons:gitconnected",
+  },
+  {
+    title: "Aceites",
+    description:
+      "Aceites hidráulicos de calidad premium para lubricación y protección contra desgaste en todo tipo de equipos.",
+    icon: "bx:droplet",
+  },
+  {
+    title: "Enfriadores",
+    description:
+      "Enfriadores hidráulicos compactos para mantener la temperatura ideal y evitar sobrecalentamientos en tu sistema.",
+    icon: "uil:snowflake",
+  },
+  {
+    title: "Acumuladores",
+    description:
+      "Acumuladores hidráulicos de alta presión para almacenar energía y regular picos de demanda en tu circuito.",
+    icon: "bx:bxs-battery",
+  },
+];
+
+
+
+
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Refacciones
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Contamos con una amplia gama de refacciones hidráulicas de alta calidad para garantizar el óptimo funcionamiento de tus sistemas. Desde mangueras y cilindros hasta válvulas y bombas, tenemos todo lo que necesitas para mantener tu equipo en perfecto estado.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-14">
+  {
+    spareparts.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

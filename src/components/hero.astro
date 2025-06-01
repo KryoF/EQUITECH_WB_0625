@@ -1,13 +1,13 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero.png";
-import Link from "@/components/ui/link.astro";
-import { Icon } from "astro-icon/components";
+import heroImage from "@/assets/hero.jpg";
+// import Link from "@/components/ui/link.astro";
+// import { Icon } from "astro-icon/components";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
+  class="grid lg:grid-cols-2 place-items-center pt-10 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 block">
     <Picture
       src={heroImage}
       alt="Astronaut in the air"
@@ -15,19 +15,18 @@ import { Icon } from "astro-icon/components";
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
+      class={"w-full h-auto rounded-lg shadow-lg object-cover aspect-[4/3] md:aspect-[4/3] lg:aspect-[5/4] xl:aspect-[6/5] 2xl:aspect-[7/6]"}
     />
   </div>
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      <span class="sr-only">Equitech | </span>Expertos en Reparación y Mantenimiento de Equipos Hidráulicos
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Ofrecemos servicios de reparación y mantenimiento a equipo hidráulico. venta de refacciones. Fabricación de cilindros y unidades de potencia. Diseño y calculo de sistemas hidráulicos.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <!-- <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="#"
         href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
@@ -48,6 +47,6 @@ import { Icon } from "astro-icon/components";
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
         GitHub Repo
       </Link>
-    </div>
+    </div> -->
   </div>
 </main>
