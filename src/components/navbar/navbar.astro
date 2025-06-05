@@ -6,45 +6,62 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Picture } from "astro:assets";
 
 const menuitems = [
+  // {
+  //   title: "Features",
+  //   path: "#",
+  //   children: [
+  //     { title: "Action", path: "/" },
+  //     { title: "Another action", path: "#" },
+  //     { title: "Dropdown Submenu", path: "#" },
+  //     { title: "404 Page", path: "/404" },
+  //   ],
+  // },
+  // {
+  //   title: "Pricing",
+  //   path: "/pricing",
+  // },
+  // {
+  //   title: "About",
+  //   path: "/about",
+  // },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
+  // {
+  //   title: "Contact",
+  //   path: "/contact",
+  // },
+  // {
+  //   title: "Pro Version",
+  //   badge: true,
+  //   path: "https://astroship-pro.web3templates.com/",
+  // },
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+      title: "Nosotros",
+      path: "#nosotros",
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+      title: "Servicios",
+      path: "#servicios",
   },
   {
-    title: "About",
-    path: "/about",
+      title: "Refacciones",
+      path: "#refacciones",
   },
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
-  },
+      title: "Contacto",
+      path: "#contacto",
+  }
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="max-w-[1500px] mx-auto flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/EQUITECH_WB_0625" class="text-lg">
+        <a href="/" class="text-lg">
           <Picture
             src={logoImage} 
             alt="equitech logo" 
@@ -60,25 +77,20 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
+                {/* {item.children && (
                   <Dropdown
                     title={item.title}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />
-                )}
+                )} */}
 
-                {!item.children && (
+                {item && (
                   <li>
                     <a
                       href={item.path}
                       class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
-                      {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
-                        </span>
-                      )}
                     </a>
                   </li>
                 )}
@@ -99,4 +111,5 @@ const menuitems = [
       </div> -->
     </div>
   </header>
+  </div>
 </Container>
